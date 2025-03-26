@@ -26,7 +26,7 @@ namespace TelegramGlassBot
 
             var me = await botClient.GetMeAsync();
             Console.WriteLine($"Бот @{me.Username} запущен. Нажмите Enter для выхода.");
-            Console.ReadLine();
+            await Task.Delay(Timeout.Infinite);
 
             cts.Cancel();
         }
